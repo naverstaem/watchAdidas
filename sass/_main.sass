@@ -183,6 +183,48 @@ header
   .top
     height: 0
 
+.features
+  +clr
+  padding-top: 50px
+  h2
+    margin-bottom: 40px
+  .features_in
+    @extend %in
+    width: 842px
+    +clr
+  .features__item
+    width: 180px
+    text-align: center
+    vertical-align: top
+    margin-right: 35px
+    display: inline-block
+    &:last-child
+      margin-right: 0
+    .features__img
+      width: 180px
+      height: 180px
+      +border-radius(50%)
+      border: solid 2px #e5e5e5
+      .vertical-centered
+        vertical-align: middle
+        display: inline-block
+        height: 100%
+
+      img
+        display: inline-block
+        vertical-align: middle
+
+
+    h3
+      font-family: 'conv_pfdintextcondpro-thin'
+      font-size: 36px
+      font-weight: normal
+    p
+      +pfl
+      font-size: 18px
+
+
+
 .specs
   padding-top: 45px
   +clr

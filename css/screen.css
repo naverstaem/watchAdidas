@@ -35,14 +35,14 @@ input::-moz-placeholder, textarea::-moz-placeholder { font-size: 16px; text-tran
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { font-size: 16px; text-transform: none; color: #5a5a5a; font-family: "Conv_PFDinTextCondPro-Light"; font-weight: normal; font-style: normal; }
 input::placeholder, textarea::placeholder { font-size: 16px; text-transform: none; color: #5a5a5a; font-family: "Conv_PFDinTextCondPro-Light"; font-weight: normal; font-style: normal; }
 
-.top .top_in, .scrollMenu .top_in, header .header_in, .bottom .header_in, .specs .specs_in, .photos .photos_in, .reviews .reviews_in, .order .order_in, .our .our_in, footer { max-width: 1200px; width: 1000px; margin-left: auto; margin-right: auto; }
+.top .top_in, .scrollMenu .top_in, header .header_in, .bottom .header_in, .features .features_in, .specs .specs_in, .photos .photos_in, .reviews .reviews_in, .order .order_in, .our .our_in, footer { max-width: 1200px; width: 1000px; margin-left: auto; margin-right: auto; }
 
 .myFancyClose { position: absolute; top: -17px; right: -18px; }
 
 .btn { display: inline-block; -moz-border-radius: 16px; -webkit-border-radius: 16px; border-radius: 16px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; padding: 8px 25px; color: #504b41; font-size: 18px; border: solid 2px #ffffff; text-decoration: underline; -moz-transition: background, 0.5s; -o-transition: background, 0.5s; -webkit-transition: background, 0.5s; transition: background, 0.5s; }
 .btn:hover { color: #504b41; background-color: white; }
 
-.title { font-size: 48px; font-family: "conv_pfdintextcondpro-thin"; line-height: 1em; color: #000; text-transform: uppercase; font-weight: normal; position: relative; text-align: center; }
+.title { font-size: 48px; font-family: "bebas_neuebook"; line-height: 1em; color: #3c3c3c; text-transform: uppercase; font-weight: normal; position: relative; text-align: center; }
 .title span { font-size: 48px; }
 
 .counter { width: 285px; text-align: center; display: block; margin: -5px auto 25px; }
@@ -175,6 +175,19 @@ header .header_in .header__right:after, .bottom .header_in .header__right:after 
 .scrollMenu { position: fixed; z-index: 999; width: 100%; top: 0; left: 0; bottom: auto; display: none; height: 60px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: rgba(110, 100, 90, 0.8); }
 .scrollMenu .top_in { padding-top: 20px; }
 .scrollMenu .top, .scrollMenu .scrollMenu { height: 0; }
+
+.features { *zoom: 1; padding-top: 50px; }
+.features:after { content: " "; display: table; clear: both; }
+.features h2 { margin-bottom: 40px; }
+.features .features_in { width: 842px; *zoom: 1; }
+.features .features_in:after { content: " "; display: table; clear: both; }
+.features .features__item { width: 180px; text-align: center; vertical-align: top; margin-right: 35px; display: inline-block; }
+.features .features__item:last-child { margin-right: 0; }
+.features .features__item .features__img { width: 180px; height: 180px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; border: solid 2px #e5e5e5; }
+.features .features__item .features__img .vertical-centered { vertical-align: middle; display: inline-block; height: 100%; }
+.features .features__item .features__img img { display: inline-block; vertical-align: middle; }
+.features .features__item h3 { font-family: "conv_pfdintextcondpro-thin"; font-size: 36px; font-weight: normal; }
+.features .features__item p { font-family: "Conv_PFDinTextCondPro-Light"; font-weight: normal; font-style: normal; font-size: 18px; }
 
 .specs { padding-top: 45px; *zoom: 1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .specs:after { content: " "; display: table; clear: both; }
