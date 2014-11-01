@@ -571,51 +571,104 @@ header
 .reviews
   +clr
   padding-bottom: 60px
+  padding-top: 60px
   h2
     margin-bottom: 35px
     text-align: center
   .reviews_in
     @extend %in
     +clr
+  .row
+    margin-top: 55px
+    &:first-child
+      margin-top: 0
   .review__item
     +background-clip(padding-box)
-    width: 300px
+    width: 280px
     position: relative
     display: inline-block
-    margin-right: 42px
+    margin-right: 75px
     vertical-align: top
-    text-align: center
+    text-align: left
     +box
     +clr
     &:last-child
       margin-right: 0
     .review__img
       display: inline-block
-      width: 120px
-      height: 120px
+      width: 80px
+      height: 80px
       +border-radius(50%)
-      border: solid 2px #e5e5e5
-      margin-bottom: 15px
-      img
-        vertical-align: middle
-        display: inline-block
-      .vertical-centered
-        vertical-align: middle
-        display: inline-block
-        height: 100%
+      margin-right: 15px
+      vertical-align: middle
+    .review__head
+      text-align: center
+      display: inline-block
+      vertical-align: top
 
-    h3
-      color: #1e1e1e
+    .review__name
+      color: #ffffff
+      width: 180px
+      height: 50px
       font-size: 24px
-      font-family: 'conv_pfdintextcondpro-light'
-      text-transform: uppercase
-      margin-bottom: 10px
-      font-weight: normal
-    p
-      +pfl
-      color: #1e1e1e
+      position: relative
+      background: #9fbd31
+      padding-top: 8px
+      +box
+
+      &:after
+        position: absolute
+        top: 44px
+        left: 11px
+        +s(review_popup1)
+        content: ""
+    .rewview__name--blue
+      background: #81b3db
+      &:after
+        +s(review_popup2)
+
+    .review__video-r
+      margin-top: 10px
+      color: #a0be32
+      display: inline-block
+      font-size: 18px
+    .review__video
+      +border-radius(6px)
+      width: 280px
+      height: 160px
+      position: relative
+      margin-top: 10px
+      &:after
+        position: absolute
+        top: 50%
+        left: 50%
+        +transform(translate(-50%,-50%))
+        +s(play2)
+        content: ""
+      &:hover
+        +opacity(.8)
+    .review__text
       font-size: 16px
-      padding: 0 10px
+      color: #1e1e1e
+      text-align: left
+      margin-top: 10px
+    .review__audio
+      text-decoration: underline
+      +pfl
+      font-size: 18px
+      color: #82b4dc
+      margin-left: 10px
+      margin-top: 15px
+      display: inline-block
+      &:hover
+        text-decoration: none
+      i
+        display: inline-block
+        vertical-align: middle
+        left: -10px
+        position: relative
+        +s(listen)
+
 
 .order
   margin-top: 0
