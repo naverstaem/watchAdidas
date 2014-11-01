@@ -333,6 +333,17 @@ form
     background: lighten(#ffef00, 10%)
     +box-shadow(0 0 0 0)
 
+.button--orange
+  @extend .button--yellow
+  +box-shadow(inset 0 -4px 0 rgb(192,91,0))
+  +background-image(linear-gradient(bottom, #db6d00 0%, #ffc73b 100%))
+  color: white
+  padding: 14px 41px
+  &:hover
+    background: lighten(#db6d00, 10%)
+    +box-shadow(0 0 0 0)
+
+
 
 .button--specs
   display: inline-block

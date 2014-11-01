@@ -291,9 +291,13 @@ header
         font-size: 24px
         font-family: 'als_rublregular'
     .charact__bottom
+      margin-top: 10px
       .charact__remain
         display: inline-block
         text-align: center
+        vertical-align: middle
+        p
+          margin-bottom: 3px
         span
           display: inline-block
           position: relative
@@ -310,6 +314,7 @@ header
           color: #ffffff
           +box-shadow(inset 0 -2px 0 rgba(0,0,0,.8))
           +background-image(linear-gradient(to bottom, #595959 0%, #b3b3b3 40%, #131313 65.01%, #595959 100%))
+          margin: 0 3px
           &:after
             height: 4px
             width: 100%
@@ -321,6 +326,10 @@ header
 
       .charact__buy
         display: inline-block
+        vertical-align: middle
+        margin-left: 30px
+
+
 
 
 
@@ -336,59 +345,84 @@ header
     text-align: center
   .specs_in
     @extend %in
+    width: 960px
     +clr
+  &__top
+    +border-radius(12px 12px 0)
+    +background-clip(padding-box)
+    +background-image(linear-gradient(to bottom, #efefef 0%, #dbdbdb 100%))
+    position: relative
+    padding: 35px
+    &:after
+      content: ""
+      position: absolute
+      background: url(../img/shadow.png) no-repeat center
+      width: 800px
+      height: 20px
+      bottom: -20px
+      left: 50%
+      +transform(translateX(-50%))
+    p
+      margin-bottom: 25px
+      width: 510px
+      &:last-of-type
+        margin-bottom: 0
+    .specs__watch
+      position: absolute
+      bottom: 0
+      right: 10px
+      img
+        display: block
+    .specs__video
+      position: absolute
+      bottom: 0
+      right: 0
+      +border-radius(8px 0 0 0)
+      +background-clip(padding-box)
+      +box-shadow(inset 0 -4px 0 rgba(200,180,70,.6))
+      +background-image(linear-gradient(to bottom, #ffef00 0%, #ffdb4f 100%))
+      font-size: 24px
+      color: #281e1e
+      text-decoration: underline
+      width: 280px
+      height: 70px
+      padding-left: 40px
+      +box
+
+      i
+        display: inline-block
+        position: relative
+        top: 16px
+        left: -20px
+        +s(play)
+      &:hover
+        text-decoration: none
 
   &__items-wrapper
-    float: right
-    width: 520px
-    margin-top: -25px
+    float: left
+    margin-left: 35px
+    margin-top: -9px
     +clr
   &__items
     float: left
-    width: 270px
     font-size: 16px
-    padding-bottom: 40px
+    margin-right: 0
     +box
     +clr
     &.short
-      width: 220px
+      margin-right: 100px
       .specs__item
         &.title
           margin-bottom: 28px
-  &__presents
-    background: #efefef
-    +border-radius(2px)
-    padding: 20px 30px
-    color: #5a5a5a
-    +clr
-    clear: both
 
-  &__price
-    margin-top: 18px
-    form
-      display: inline-block
-      margin: 0 18px
-    .price
-      display: inline-block
-      font-family: 'conv_pfdintextcondpro-regular'
-      font-size: 48px
-      color: #aa2828
-      vertical-align: middle
-      span
-        font-family: 'als_rublregular'
-        font-size: 24px
-    .left-only
-      font-size: 16px
-      display: inline-block
-      vertical-align: middle
-      color: #000000
-      font-family: 'conv_segoeprintregular'
+
+
 
   &__item
-    color: #787878
-    margin-top: 16px
+    color: #5a5a5a
+    margin-top: 24px
     font-family: 'conv_pfdintextcondpro-light'
-    font-size: 18px
+    font-size: 16px
     &:first-child
       margin-top: 0
     &.title
@@ -397,151 +431,142 @@ header
       font-size: 18px
 
     span
-      color: #000
+      color: #1e1e1e
       font-size: 18px
-      text-transform: uppercase
-    .item-colors
-      display: inline-block
-      vertical-align: top
-      .golden
-        display: inline-block
-        width: 20px
-        height: 20px
-        +border-radius(2px)
-        background: #ebd7a5
-        margin-left: 10px
-      .dark
-        @extend .golden
-        background: #000000
+      text-transform: none
 
-  &__watch
-    margin-top: -10px
+  &__bottom
+    margin-top: 40px
+  &__images
+    margin-top: -20px
     position: relative
     float: left
-    width: 260px
-    margin-left: 70px
-
-    img
-      width: 260px
-      height: 535px
+    width: 440px
+    .photo__item
+      width: 210px
+      height: 190px
+      margin-top: 15px
       position: relative
-      display: block
-    .prev
-      position: absolute
-      content: ""
-      +s(prev)
-      top: 40%
-      left: -70px
-      cursor: pointer
-
-    .next
-      position: absolute
-      content: ""
-      +s(next)
-      top: 40%
-      right: -70px
-      cursor: pointer
-
-    .threesixty
-      position: absolute
-      text-align: center
-      padding-top: 35px
-      +box
-      top: 0px
-      right: -120px
-      +s(360)
-      font-size: 36px
-      color: #5a5a5a
-      content: ""
-      font-family: 'conv_pfdintextcondpro-thin'
-
-.photos
-  padding: 35px 0 60px 0
-  +box
-  +clr
-  .photos_in
-    @extend %in
-  .photo__item
-    position: relative
-    display: inline-block
-    width: 320px
-    height: 180px
-    vertical-align: top
-    margin-right: 15px
-    &:last-child
-      margin-right: 0
-    i
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      background: rgba(#fff, .7)
-      +opacity(1)
-      +transition(background, .5s)
-    &:hover
-      i
+      display: inline-block
+      +border-radius(6px)
+      &:nth-child(2n+2)
+        margin-left: 15px
+      img
+        display: block
+        +border-radius(6px)
+      span
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
         +opacity(0)
-    span
+        z-index: 1
+        +border-radius(6px)
+        background: rgba(#fff, .6)
+        &:after
+          content: ""
+          position: absolute
+          +s(zoom)
+          top: 50%
+          left: 50%
+          +transform(translate(-50%,-50%))
+        &:hover
+          +opacity(1)
+
+
+.our
+  background: url(../img/our_bg.jpg) center no-repeat
+  +background-size(cover)
+  height: 790px
+  padding-top: 65px
+  position: relative
+  +clr
+  +box
+  h3
+    font-weight: normal
+    color: #1e1e1e
+    font-size: 36px
+    font-family: 'conv_pfdintextcondpro-thin'
+    text-align: center
+    line-height: 1em
+    text-transform: none
+  h2
+    color: #1e1e1e
+    font-family: 'bebas_neuebold'
+    font-size: 72px
+    text-align: center
+    font-weight: normal
+    line-height: 1.2em
+
+  .our_in
+    @extend %in
+    position: relative
+    +clr
+
+  .russia
+    position: relative
+    background: url(../img/russia.png) center center no-repeat
+    width: 860px
+    height: 515px
+    margin: -105px auto 0
+  &__delivery
+    width: 170px
+    color: #ffffff
+    font-family: 'conv_pfdintextcondpro-regular'
+    font-size: 18px
+    position: absolute
+    top: 50%
+    left: 50%
+    +transform(translate(-50%, -50%))
+    margin-top: 60px
+    margin-left: 153px
+    &:before
       position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      background: rgba(#000, .6)
-      +opacity(0)
-      z-index: 1
-      +transition(background, .5s)
-      &:after
-        position: absolute
-        content: ""
-        +s(zoom)
-        top: 50%
-        left: 50%
-        +transform(translate(-50%, -50%))
-      &:before
-        position: absolute
-        top: 6px
-        left: 6px
-        width: 300px
-        height: 160px
-        background: none
-        border: solid rgba(#ebd7a5, .4) 4px
-        content: ""
-      &:hover
-        +opacity(1)
+      content: ""
+      +s(pin_ico)
+      top: -73px
+      left: -132px
+  &__bottom
+    width: 600px
+    margin: 55px auto 0
+    position: relative
+    margin-left: 448px
+  &__price
+    width: 180px
+    display: inline-block
+    position: relative
+    margin-right: 170px
+    margin-left: 50px
+    color: #ffffff
+    font-size: 18px
+    font-family: 'conv_pfdintextcondpro-regular'
+    &:before
+      position: absolute
+      top: -8px
+      left: -75px
+      content: ""
+      +s(price_ico)
+  &__support
+    width: 190px
+    display: inline-block
+    position: relative
+    font-size: 18px
+    color: #ffffff
+    font-family: 'conv_pfdintextcondpro-regular'
+    &:before
+      position: absolute
+      top: -5px
+      left: -75px
+      content: ""
+      +s(bubble_ico)
+  &__girl
+    position: absolute
+    bottom: -88px
+    left: -108px
     img
       display: block
 
-.slick-prev, .slick-next
-  position: absolute
-  content: ''
-  top: 14px
-  left: 0
-  width: 330px
-  height: 200px
-  +transition(background, .5s)
-  &:hover
-    +background-image(linear-gradient(to right, rgba(#fff, 1), rgba(#fff, 0)))
-  &:before
-    position: absolute
-    content: ""
-    top: 38%
-    left: 0
-    +s(prev)
-
-.slick-next
-  right: 0
-  left: auto
-  &:hover
-    +background-image(linear-gradient(to right, rgba(#fff, 0), rgba(#fff, 1)))
-  &:before
-    position: absolute
-    content: ""
-    top: 38%
-    right: 5px
-    left: auto
-    +s(next)
 
 .reviews
   +clr
@@ -670,97 +695,7 @@ header
     button
       font-size: 24px
 
-.our
-  background: url(../img/our_bg.jpg) center no-repeat
-  +background-size(cover)
-  height: 800px
-  padding-top: 65px
-  position: relative
-  +clr
-  +box
-  h3
-    font-weight: normal
-    color: #ffffff
-    font-size: 36px
-    font-family: 'conv_pfdintextcondpro-thin'
-    text-align: center
-    line-height: 1em
-    text-transform: uppercase
-  h2
-    color: white
-    font-family: 'code_pro_lightregular'
-    font-size: 60px
-    text-align: center
-    font-weight: normal
-    line-height: 1.2em
 
-  .our_in
-    @extend %in
-    position: relative
-    +clr
-
-  .russia
-    position: relative
-    background: url(../img/russia.png) center center no-repeat
-    width: 860px
-    height: 515px
-    margin: -100px auto 0
-  &__delivery
-    width: 170px
-    color: #ffffff
-    font-family: 'conv_pfdintextcondpro-regular'
-    font-size: 18px
-    position: absolute
-    top: 50%
-    left: 50%
-    +transform(translate(-50%, -50%))
-    margin-top: 60px
-    margin-left: 35px
-    &:before
-      position: absolute
-      content: ""
-      +s(pin_ico)
-      top: -73px
-      left: -132px
-  &__bottom
-    width: 600px
-    margin: 55px auto 0
-    position: relative
-    margin-left: 345px
-  &__price
-    width: 180px
-    display: inline-block
-    position: relative
-    margin-right: 170px
-    margin-left: 50px
-    color: #ffffff
-    font-size: 18px
-    font-family: 'conv_pfdintextcondpro-regular'
-    &:before
-      position: absolute
-      top: -8px
-      left: -75px
-      content: ""
-      +s(price_ico)
-  &__support
-    width: 190px
-    display: inline-block
-    position: relative
-    font-size: 18px
-    color: #ffffff
-    font-family: 'conv_pfdintextcondpro-regular'
-    &:before
-      position: absolute
-      top: -5px
-      left: -75px
-      content: ""
-      +s(bubble_ico)
-  &__girl
-    position: absolute
-    bottom: -107px
-    left: -210px
-    img
-      display: block
 
 .bottom
   height: 790px
