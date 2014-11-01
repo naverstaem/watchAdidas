@@ -35,7 +35,7 @@ input::-moz-placeholder, textarea::-moz-placeholder { font-size: 16px; text-tran
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { font-size: 16px; text-transform: none; color: #5a5a5a; font-family: "Conv_PFDinTextCondPro-Light"; font-weight: normal; font-style: normal; }
 input::placeholder, textarea::placeholder { font-size: 16px; text-transform: none; color: #5a5a5a; font-family: "Conv_PFDinTextCondPro-Light"; font-weight: normal; font-style: normal; }
 
-.top .top_in, .scrollMenu .top_in, header .header_in, .bottom .header_in, .features .features_in, .charact .charact_in, .specs .specs_in, .our .our_in, .reviews .reviews_in, .order .order_in, footer { max-width: 1200px; width: 1000px; margin-left: auto; margin-right: auto; }
+.top .top_in, .scrollMenu .top_in, header .header_in, .bottom .header_in, .features .features_in, .charact .charact_in, .specs .specs_in, .our .our_in, .reviews .reviews_in, .order .order_in, footer .footer_in { max-width: 1200px; width: 1000px; margin-left: auto; margin-right: auto; }
 
 .myFancyClose { position: absolute; top: -17px; right: -18px; }
 
@@ -311,7 +311,11 @@ header .header_in .header__right:after, .bottom .header_in .header__right:after 
 .bottom { padding-top: 35px; }
 .bottom .header_in--bottom { margin-top: 0px !important; }
 
-footer { box-sizing: border-box; height: 90px; text-align: center; padding-top: 16px; }
+.questions { text-align: center; padding: 40px 0; }
+.questions .button--questions { display: inline-block; text-align: center; font-family: "Conv_PFDinTextCondPro-Light"; font-weight: normal; font-style: normal; font-size: 24px; text-decoration: underline; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; border: solid 2px #fadc28; padding: 17px 61px; color: #1e1e1e; margin-top: 15px; }
+.questions .button--questions:hover { text-decoration: none; }
+
+footer { box-sizing: border-box; background: url(../img/footer_bg.jpg) center center no-repeat; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; height: 100px; text-align: center; padding-top: 16px; }
 footer p { font-size: 16px; color: #787878; }
-footer p a { color: #be1e1e; }
+footer p a { color: #963269; }
 footer p a:hover { text-decoration: none; }
