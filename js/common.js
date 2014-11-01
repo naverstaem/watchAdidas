@@ -3,13 +3,13 @@ head.ready(function() {
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
 	// });
-//   $(window).scroll(function () {
-//       if ( $(this).scrollTop() > 200) {
-//           $('.scrollMenu').slideDown();
-//       } else if ( $(this).scrollTop() <= 200 ) {
-//           $('.scrollMenu').slideUp();
-//       }
-//   });
+   $(window).scroll(function () {
+       if ( $(this).scrollTop() > 200) {
+           $('.scrollMenu').slideDown();
+       } else if ( $(this).scrollTop() <= 200 ) {
+           $('.scrollMenu').slideUp();
+       }
+   });
 
 //    jQuery(document).ready(function($) {
 //        var nav = $('.menu');
@@ -31,11 +31,16 @@ head.ready(function() {
 //
 //    });
 
+//    $(window).on("scroll touchmove", function () {
+//        $('.top').toggleClass('tiny', $(document).scrollTop() > 0);
+//    });
+
+
     $('#form1 form').validate();
-//    $('#form2').validate();
-//    $('#form3').validate();
-//    $('#form4').validate();
-    $('#form5').validate();
+    $('#form2').validate();
+    $('#form3').validate();
+    $('#form4').validate();
+    $('#form5 form').validate();
 
     $('.fancybox').fancybox({
         helpers:{
